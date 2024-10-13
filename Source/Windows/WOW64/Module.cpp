@@ -509,6 +509,8 @@ void BTCpuProcessInit() {
   FEXCore::Config::Set(FEXCore::Config::CONFIG_APP_FILENAME, ExecutablePath);
   FEXCore::Config::Set(FEXCore::Config::CONFIG_APP_CONFIG_NAME, ExecutableName);
 
+  __wine_dbg_output("starting FEX based libwow64fex.dll\n");
+
   FEXCore::Profiler::Init("", "");
 
   SignalDelegator = fextl::make_unique<FEX::DummyHandlers::DummySignalDelegator>();
